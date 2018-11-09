@@ -1,0 +1,26 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main()
+{
+	double maxS, nominator, denominator = 1, sum = 1, k = 2, number;
+	cin >> maxS;
+	while(sum<maxS)
+	{
+		nominator = pow(-1, k - 1)*pow(k, 3);
+		for(int i=1; i<=k-1; i++)
+		{
+			denominator = denominator * i;
+		}
+		cout << nominator << "fact"<< endl;
+		cout << denominator << endl;
+		number = nominator / denominator;
+		sum = sum + number;
+		k++;
+		//cout << sum << endl;
+	}
+	
+
+	system("pause");
+	return 0;
+}
