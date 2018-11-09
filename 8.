@@ -1,0 +1,22 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main()
+{
+	double x, y, maxPoint=0, sum, coordinate1, coordinate2;
+	do
+	{
+		cin >> x;
+		cin >> y;
+		sum = x * x + y * y;
+		if (sum > maxPoint)
+		{
+			maxPoint = sum;
+			coordinate1 = x;
+			coordinate2 = y;
+		}
+	} while (x != 0 && y != 0);
+	cout << coordinate1 << ":" << coordinate2 << endl;
+	system("pause");
+	return 0;
+}
