@@ -1,0 +1,25 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main()
+{
+	int insideR, outsideR, x, y,z;
+	bool part1=false;
+	bool part2 = false;
+	cin >> insideR >> outsideR >> x >> y;
+	z = sqrt(pow(x, 2) + pow(y, 2));
+	if ((x >= 0 || y >= 0) && z <= insideR)
+	{
+		part1 = true;
+	}
+	if (x <= 0 && z >= outsideR && y <= outsideR && x <= outsideR)
+	{
+		part2 = true;
+	}
+	if (x <= 0 && y <= 0 && (x + y) > -2 * outsideR)
+	{
+
+	}
+	system("pause");
+	return 0;
+}
