@@ -1,0 +1,29 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main()
+{
+	int number, digit, maxDigit=0;
+	cin >> number;
+	maxDigit = number % 10;
+	while (number != 0)
+	{
+		digit = number % 10;
+		number = number / 10;
+		if (digit > maxDigit)
+		{
+			cout << "NO!" << endl;
+			break;
+		}
+		else {
+			if (number ==0)
+			{
+				cout << "YES!" << endl;
+			}
+		}
+		
+	}
+	
+	system("pause");
+	return 0;
+}
