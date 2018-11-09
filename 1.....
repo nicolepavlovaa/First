@@ -3,23 +3,35 @@
 using namespace std;
 int main()
 {
-	int insideR, outsideR, x, y,z;
-	bool part1=false;
+	int insideR, outsideR, x, y, z;
+	bool part1 = false;
 	bool part2 = false;
+	bool part3 = false;
+	bool part4 = false;
 	cin >> insideR >> outsideR >> x >> y;
 	z = sqrt(pow(x, 2) + pow(y, 2));
 	if ((x >= 0 || y >= 0) && z <= insideR)
 	{
 		part1 = true;
 	}
-	if (x <= 0 && z >= outsideR && y <= outsideR && x <= outsideR)
+	if (x <= 0 && z >= outsideR && abs(y) <= outsideR && abs(x) <= outsideR)
 	{
 		part2 = true;
 	}
-	if (x <= 0 && y <= 0 && (x + y) > -2 * outsideR)
+	if (x <= 0 && y <= 0 && (x + y) <= -2 * outsideR)
 	{
-
+		part3 = true;
 	}
+	if (x <= 0 && y >= 0 && (x + y) <= -1 * outsideR)
+	{
+		part4 = true;
+	}
+	if (part1 == true || part2 == true || part3 == true || part4 == true)
+	{
+		cout << "Point is in figure" << endl;
+	}
+	else cout << "Point is Not in Figure" << endl;
+
 	system("pause");
 	return 0;
 }
